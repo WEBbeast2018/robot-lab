@@ -1,20 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { PartsService } from '../../services/parts.service';
+import { Part } from '../../models/part.model';
 
 @Component({
   selector: 'app-part-list',
   template: `
     <ul>
-      <li>Part 1</li>
-      <li>Part 2</li>
+      <li *ngFor="let part of parts">{{part.name}}</li>
     </ul>
   `,
   styleUrls: ['./part-list.component.scss']
 })
 export class PartListComponent implements OnInit {
+  parts: Part[];
 
-  constructor() { }
+  constructor(private partsService: PartsService) { }
 
   ngOnInit() {
+    this.partsService.getParts().subscribe((data) => {
+      this.parts = data
+    });
   }
 
 }
