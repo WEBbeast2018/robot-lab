@@ -3,19 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <h1>
-      ROBOT LAB
-    </h1>
-    <nav>
-      <button routerLink="/robots">
-        Robots
-      </button>
-      <label routerLink="/parts">
-        Parts
-      </label>
-    </nav>
+    <app-header></app-header>
     <ol>
-      <li>Add components: header, robot-list, parts-details</li>
+      <li>Add components: header, robot-list, part-list</li>
       <li>Set routing for robots and parts </li>
       <li>Add model (classes) for Robot, Part, according to mock data</li>
       <li>Update mock with Robot and Part models</li>
@@ -27,6 +17,4 @@ import { Component } from '@angular/core';
   `,
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'app';
-}
+export class AppComponent {}
