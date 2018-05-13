@@ -1,0 +1,25 @@
+/* DashboardComponent's private CSS styles */
+.parts-container {
+  display: flex;
+  max-width: 80%;
+  margin: auto;
+
+  img {
+    width: 30px;
+    height: 30px;
+    display: inline;
+  }
+
+  .part-card {
+    color: #eee;
+    background-color: #6ed2ff;
+    min-width: 55px;
+    border-radius: 2px;
+    height: 100px;
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    margin-left: 50px;
+  }
+}

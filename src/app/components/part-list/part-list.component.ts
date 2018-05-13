@@ -5,8 +5,8 @@ import { Part } from '../../models/part.model';
 @Component({
   selector: 'app-part-list',
   template: `
-    <ul>
-      <li *ngFor="let part of parts">{{part.name}}</li>
+    <ul class="parts-container">
+      <li *ngFor="let part of parts" class="part-card">{{part.name}}</li>
     </ul>
   `,
   styleUrls: ['./part-list.component.scss']
