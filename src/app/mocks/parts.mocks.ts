@@ -1,7 +1,9 @@
 
 // After creating class - set type to be class 'Part'
 // export const PARTS: Part[] = {...}
-export const PARTS = [
+import { Part } from '../models/part.model';
+
+export const PARTS: Part[] = [
   {
     cpu: 'i5',
     engine: 'GPU',
