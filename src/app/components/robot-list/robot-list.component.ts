@@ -4,8 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-robot-list',
   template: `
     <ul>
-      <li>Component 1</li>
-      <li>Component 2</li>
+      <li>Robot 1</li>
+      <li>Robot 2</li>
     </ul>
   `,
   styleUrls: ['./robot-list.component.scss']
