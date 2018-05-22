@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <app-header></app-header>
+    <h5>Todo list</h5>
     <ol>
       <li>Add components: header, robot-list, part-list</li>
       <li>Set routing for robots and parts </li>
@@ -11,8 +11,9 @@ import { Component } from '@angular/core';
       <li>Update mock with Robot and Part models</li>
       <li>Add parts and robots data services</li>
       <li>Connect data services to mock data and lists components</li>
-      <li>Add styles to scss files (use commented styles in style,</li>
+      <li>Add styles to scss files</li>
     </ol>
+    <app-header></app-header>
     <router-outlet></router-outlet>
   `,
   styleUrls: ['./app.component.scss']
