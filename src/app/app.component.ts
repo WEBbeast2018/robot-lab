@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
+    <app-header></app-header>
+    <router-outlet></router-outlet>
     <h5>Todo list</h5>
     <ol>
       <li>Add components: header, robot-list, part-list</li>
@@ -13,8 +15,6 @@ import { Component } from '@angular/core';
       <li>Connect data services to mock data and lists components</li>
       <li>Add styles to scss files</li>
     </ol>
-    <app-header></app-header>
-    <router-outlet></router-outlet>
   `,
   styleUrls: ['./app.component.scss']
 })

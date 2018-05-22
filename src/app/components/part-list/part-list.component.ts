@@ -6,7 +6,23 @@ import { Part } from '../../models/part.model';
   selector: 'app-part-list',
   template: `
     <ul class="parts-container">
-      <li *ngFor="let part of parts" class="part-card">{{part.name}}</li>
+      <li *ngFor="let part of parts" class="part-card">
+        <div>
+          <img src="/assets/images/cpu.png"/>
+          <label>
+            <b>{{part.name}}</b>
+          </label>
+        </div>
+        <div>
+          <label>CPU: </label>{{part.cpu}}
+        </div>
+        <div>
+          <label>Engine: </label>{{part.engine}}
+        </div>
+        <div>
+          <label>Type: </label>{{part.type}}
+        </div>
+      </li>
     </ul>
   `,
   styleUrls: ['./part-list.component.scss']
@@ -14,11 +30,12 @@ import { Part } from '../../models/part.model';
 export class PartListComponent implements OnInit {
   parts: Part[];
 
-  constructor(private partsService: PartsService) { }
+  constructor(private partsService: PartsService) {
+  }
 
   ngOnInit() {
     this.partsService.getParts().subscribe((data) => {
-      this.parts = data
+      this.parts = data;
     });
   }
 

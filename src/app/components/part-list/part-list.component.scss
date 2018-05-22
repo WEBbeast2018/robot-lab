@@ -1,8 +1,8 @@
-/* DashboardComponent's private CSS styles */
+@import "../shared.components.style";
+
 .parts-container {
   display: flex;
-  max-width: 80%;
-  margin: auto;
+  justify-content: center;
 
   img {
     width: 30px;
@@ -11,15 +11,15 @@
   }
 
   .part-card {
-    color: #eee;
-    background-color: #6ed2ff;
-    min-width: 55px;
-    border-radius: 2px;
-    height: 100px;
-    width: 150px;
-    display: inline-block;
-    text-align: center;
-    position: relative;
-    margin-left: 50px;
+    @extend .card;
+    img {
+      margin: 5px;
+    }
+    div {
+      display: flex;
+      &:first-child label {
+        padding-top: 15px;
+      }
+    }
   }
 }

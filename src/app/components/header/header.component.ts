@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
       ROBOT LAB
     </h1>
     <nav>
-      <button routerLink="/robots">
+      <button routerLink="/robots" routerLinkActive="selected">
         Robots
       </button>
-      <button routerLink="/parts">
+      <button routerLink="/parts" routerLinkActive="selected">
         Parts
       </button>
     </nav>
