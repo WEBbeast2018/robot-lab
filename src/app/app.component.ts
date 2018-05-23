@@ -16,6 +16,7 @@ import { Component } from '@angular/core';
       <li>Add styles to scss files</li>
       <li>Install angular-in-memory-web-api (so we can simulate http requests)</li>
       <li>Add HttpClient and subscribe to get data</li>
+      <li>Use async pipe for parts and robots services</li>
     </ol>
   `,
   styleUrls: ['./app.component.scss']
