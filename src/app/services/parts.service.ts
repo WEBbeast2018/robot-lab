@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
-import { PARTS } from '../mocks/parts.mocks';
 import { Part } from '../models/part.model';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PartsService {
+  private partsUrl = 'api/parts';  // URL to web api
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getParts(): Observable<Part[]> {
-    return of(PARTS);
+    return this.http.get<Part[]>(this.partsUrl)
   }
 }

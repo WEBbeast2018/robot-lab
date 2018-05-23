@@ -14,6 +14,8 @@ import { Component } from '@angular/core';
       <li>Add parts and robots data services</li>
       <li>Connect data services to mock data and lists components</li>
       <li>Add styles to scss files</li>
+      <li>Install angular-in-memory-web-api (so we can simulate http requests)</li>
+      <li>Add HttpClient and subscribe to get data</li>
     </ol>
   `,
   styleUrls: ['./app.component.scss']
