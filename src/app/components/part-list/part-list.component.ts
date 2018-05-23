@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { PartsService } from '../../services/parts.service';
 import { Part } from '../../models/part.model';
+import { Observable } from 'rxjs/index';
 
 @Component({
   selector: 'app-part-list',
   template: `
     <ul class="parts-container">
-      <li *ngFor="let part of parts" class="part-card">
+      <li *ngFor="let part of parts$ | async" class="part-card">
         <div>
           <img src="/assets/images/cpu.png"/>
           <label>
@@ -28,15 +29,13 @@ import { Part } from '../../models/part.model';
   styleUrls: ['./part-list.component.scss']
 })
 export class PartListComponent implements OnInit {
-  parts: Part[];
+  parts$: Observable<Part[]>;
 
   constructor(private partsService: PartsService) {
   }
 
   ngOnInit() {
-    this.partsService.getParts().subscribe((data) => {
-      this.parts = data;
-    });
+    this.parts$ = this.partsService.getParts();
   }
 
 }
